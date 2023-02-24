@@ -12,9 +12,9 @@ public class Pellet : MonoBehaviour
         FindObjectOfType<GameManager>().PelletEaten(this);
     }
 
-    private void OnTriggerEnter2D(Collider2D cld)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (cld.gameObject.layer == LayerMask.NameToLayer("Pacman"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Pacman"))
         {
             Eat();
         }
