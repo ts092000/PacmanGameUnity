@@ -77,13 +77,13 @@ public class GameManager : MonoBehaviour
     private void SetScore(int score)
     {
         this.score = score;
-        scoreText.text = score.ToString().PadLeft(2, '0');
+        scoreText.text = "Scores: " + score.ToString().PadLeft(2, '0');
     }
 
     private void SetLives(int lives)
     {
         this.lives = lives;
-        livesText.text = "x" + lives.ToString();
+        livesText.text = "Lives: x" + lives.ToString();
     }
 
     public void GhostEaten(Ghost ghost)
